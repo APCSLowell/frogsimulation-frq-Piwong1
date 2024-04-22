@@ -23,7 +23,7 @@ public class FrogSimulation
 			hops--;
 		}
 		
-		return frogPosition>=goalDistance;
+		return steps>=goalDistance;
 
 	}
 	
