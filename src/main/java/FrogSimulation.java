@@ -17,14 +17,13 @@ public class FrogSimulation
 	{ 
 		/* to be implemented in part (a) */
 		int steps=0;
-		int hops=0;
-		while(steps>=0&&steps<goalDistance&&hops<maxHops){
+		int hops=maxHops;
+		while(steps>=0&&steps<goalDistance&&hops>0){
 		steps+=hopDistance();
-			hops++;
+			hops--;
 		}
-		if(steps<0||hops>=maxHops)
-			return false;
-		return true;
+		
+		return frogPosition>=goalDistance;
 
 	}
 	
